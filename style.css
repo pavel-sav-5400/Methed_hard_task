@@ -1,0 +1,111 @@
+.container {
+    padding: 0 30px;
+}
+
+.block {
+    margin-bottom: 100px;
+    border: 1px solid black;
+}
+
+.block:last-child {
+    margin-bottom: 0;
+}
+
+.block1 {
+    width: 100%;
+    height: 50px;
+}
+
+.block2 {
+    background-color: #759405;
+    width: 100px;
+    height: 50px;
+    animation-name: anim-two;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+.block2:hover {
+    animation-play-state: running;
+}
+
+.block3 {
+    position: relative;
+    width: 20%;
+    height: 150px;
+    box-sizing: border-box;
+}
+
+
+.block1__bar {
+    width: 90%;
+    height: inherit;
+    background-color:blueviolet;
+    animation-name: anim-bar;
+    animation-duration: 3s;
+    transition-timing-function: ease-in;
+}
+
+@keyframes anim-bar {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes anim-two {
+    0% {
+        width: 20%;
+    }
+    50% {
+        width: 100%;
+    }
+    100% {
+        width: 20%;
+    }
+}
+
+.circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    animation: anim-circle 5s linear infinite,
+    anim-left 5s linear infinite;
+}
+
+@keyframes anim-circle {
+    0% {
+        top: 0%;
+    }
+    25% {
+        top: 93%;
+    }
+    50% {
+        top: 65%;
+    }
+
+    80% {
+        top: 93%;
+    }
+    90% {
+        top: 90%;
+    }
+    100% {
+        top: 93%
+    }
+}
+
+@keyframes anim-left {
+    from {
+        left: 0%;
+    }
+    to {
+        left: 100%;
+    }
+}
